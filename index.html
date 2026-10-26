@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luca Bonessi — Diseñador Industrial / UXUI</title>
+  <meta name="description" content="Portfolio profesional de Luca Bonessi — Diseñador Industrial y Diseñador UX/UI. Modelado 3D en SolidWorks, planos para producción en serie, renderizado fotorrealista de productos y diseño de interfaces." />
+
+  <!-- Tipografía Geométrica y Técnica: Space Grotesk, Plus Jakarta Sans y JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       A. BARRA SUPERIOR (HEADER FIJO)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="header-left">
+      <!-- Botón para colapsar / desplegar el Menú Lateral Izquierdo -->
+      <button
+        id="drawerToggleBtn"
+        class="drawer-toggle-btn"
+        type="button"
+        aria-label="Alternar panel de categorías"
+        aria-expanded="true"
+        title="Mostrar / ocultar menú de categorías"
+      >
+        <div class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <!-- Indicador de vista activa -->
+      <div class="header-breadcrumb" aria-live="polite">
+        <span id="currentBreadcrumb" class="crumb-active">00 · Presentación</span>
+      </div>
+    </div>
+
+    <!-- Esquina Superior Derecha: Botón Modo Claro/Oscuro + Botón Contacto + Íconos Interactivos Instagram y LinkedIn -->
+    <div class="header-right">
+      <!-- Botón para elegir entre Modo Oscuro y Modo Claro -->
+      <button
+        id="themeToggleBtn"
+        class="btn-theme-toggle"
+        type="button"
+        aria-label="Cambiar entre modo claro y modo oscuro"
+        title="Cambiar entre modo oscuro y modo claro"
+      >
+        <!-- Ícono Luna (visible en modo claro para pasar a oscuro) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <!-- Ícono Sol (visible en modo oscuro para volver a claro) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span id="themeToggleLabel">Modo Oscuro</span>
+      </button>
+
+      <!-- 1. Botón de "Contacto" minimalista (borde negro fino, relleno naranja desaturado en hover) -->
+      <button id="openContactBtn" class="btn-contact" type="button">
+        <span>Contacto</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </button>
+
+      <!-- 2. Íconos interactivos de Instagram y LinkedIn con micro-interacción hover -->
+      <div class="social-wrapper">
+        <a
+          href="https://www.instagram.com/lucabonessi.di/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon-link"
+          aria-label="Instagram profesional de Luca Bonessi"
+          title="Instagram · @lucabonessi.di"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lbonessidi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon-link"
+          aria-label="LinkedIn profesional de Luca Bonessi"
+          title="LinkedIn · /in/lbonessidi"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       ESTRUCTURA PRINCIPAL: DRAWER LATERAL CREMA + ESCENARIO DE TARJETAS
+       ======================================================================== -->
+  <div id="appShell" class="app-shell">
+
+    <!-- Fondo oscuro para cierre táctil en dispositivos móviles -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- ======================================================================
+         C. MENÚ LATERAL DESPLEGABLE DE CATEGORÍAS (TONO CREMA + SOMBRA DERECHA)
+         ====================================================================== -->
+    <aside id="categorySidebar" class="category-sidebar" aria-label="Menú de categorías del portfolio">
+      <div class="sidebar-inner">
+        <div>
+          <div class="sidebar-header">
+            <span class="sidebar-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              Categorías
+            </span>
+            <button
+              id="sidebarPinBtn"
+              class="sidebar-collapse-pin"
+              type="button"
+              title="Colapsar / expandir panel izquierdo"
+              aria-label="Colapsar panel izquierdo"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <nav class="category-nav" aria-label="Categorías de proyectos">
+            <div class="nav-section-caption">Inicio</div>
+
+            <!-- Botón para volver a la portada Hero -->
+            <button
+              type="button"
+              class="nav-home-btn is-active"
+              data-view-target="hero"
+            >
+              <span>00 · Presentación</span>
+              <span>⌂</span>
+            </button>
+
+            <div class="nav-section-caption">Proyectos</div>
+
+            <!-- 1. Botón seleccionable: Solidworks -->
+            <button
+              type="button"
+              class="category-btn"
+              data-category="solidworks"
+              aria-pressed="false"
+            >
+              <div class="cat-btn-left">
+                <span class="cat-name">Solidworks</span>
+                <span class="cat-sub">Modelado 3D &amp; Planos</span>
+              </div>
+              <div class="cat-btn-right">
+                <span class="cat-count">03</span>
+                <span class="cat-indicator" aria-hidden="true"></span>
+              </div>
+            </button>
+
+            <!-- 2. Botón seleccionable: Renders -->
+            <button
+              type="button"
+              class="category-btn"
+              data-category="renders"
+              aria-pressed="false"
+            >
+              <div class="cat-btn-left">
+                <span class="cat-name">Renders</span>
+                <span class="cat-sub">Visualización 3D</span>
+              </div>
+              <div class="cat-btn-right">
+                <span class="cat-count">03</span>
+                <span class="cat-indicator" aria-hidden="true"></span>
+              </div>
+            </button>
+
+            <!-- 3. Botón seleccionable: UX / UI -->
+            <button
+              type="button"
+              class="category-btn"
+              data-category="uxui"
+              aria-pressed="false"
+            >
+              <div class="cat-btn-left">
+                <span class="cat-name">UX / UI</span>
+                <span class="cat-sub">Interfaces &amp; Apps</span>
+              </div>
+              <div class="cat-btn-right">
+                <span class="cat-count">03</span>
+                <span class="cat-indicator" aria-hidden="true"></span>
+              </div>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Barra vertical compacta visible cuando el menú lateral está colapsado en escritorio -->
+      <div class="collapsed-rail" aria-label="Acceso rápido en modo compacto">
+        <button type="button" class="rail-btn is-active" data-view-target="hero" title="Inicio / Presentación">00</button>
+        <button type="button" class="rail-btn" data-category="solidworks" title="Categoría: Solidworks">SW</button>
+        <button type="button" class="rail-btn" data-category="renders" title="Categoría: Renders">RN</button>
+        <button type="button" class="rail-btn" data-category="uxui" title="Categoría: UX / UI">UX</button>
+        <span id="expandRailLabel" class="rail-vertical-label" title="Expandir panel de categorías">Abrir menú +</span>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         ESCENARIO PRINCIPAL (SECCIÓN "00" EN TARJETAS + GALERÍA DINÁMICA)
+         ====================================================================== -->
+    <main class="main-stage">
+
+      <!-- ====================================================================
+           B. SECCIÓN PRINCIPAL "00" (TARJETAS LIMPIAS SIN LÍNEAS CUADRICULADAS)
+           ==================================================================== -->
+      <section id="heroView" class="view-panel" aria-label="Presentación principal">
+
+        <!-- Grilla superior de 2 Tarjetas Principales -->
+        <div class="hero-cards-layout">
+
+          <!-- Tarjeta Izquierda: Jerarquía Estricta Nivel 1, Nivel 2 y Nivel 3 -->
+          <article class="hero-bio-card">
+            <div class="hero-hierarchy-stack">
+              <!-- NIVEL 1 (Tamaño Grande --fs-lg): Logo personal (Logo.jfif) + Luca Bonessi -->
+              <div class="hero-level-1">
+                <div class="personal-logo-mark" title="Logo personal de Luca Bonessi">
+                  <img src="Logo.jfif" alt="Logo Luca Bonessi" class="personal-logo-img" />
+                </div>
+
+                <h1 class="hero-display-name">Luca Bonessi</h1>
+              </div>
+
+              <!-- NIVEL 2 (Tamaño Mediano --fs-md): Diseñador Industrial / UXUI -->
+              <div class="hero-level-2">
+                <span class="hero-subtitle-dot" aria-hidden="true"></span>
+                <h2 class="hero-subtitle">Diseñador Industrial / UXUI</h2>
+              </div>
+
+              <!-- NIVEL 3 (Tamaño Chico --fs-sm, máx. 650px): Bio descriptiva -->
+              <div class="hero-level-3">
+                <p class="hero-bio-paragraph">
+                  "Diseño productos, sistemas, servicios y experiencias centrados en las personas, con visión integral. Articulo factores ambientales, socioculturales y productivos; trabajo en equipos interdisciplinares, investigación e innovación. Manejo de software de Diseño: Illustrator, modelado 3D, planos para producción en serie y renderizado fotorrealista de productos."
+                </p>
+              </div>
+            </div>
+
+            <!-- Botones de acción rápida -->
+            <div class="hero-cta-group">
+              <button type="button" class="btn-primary-orange" data-category="solidworks">
+                <span>Explorar Proyectos</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <button type="button" class="btn-outline-editorial" data-category="renders">
+                <span>Ver Renders 3D</span>
+              </button>
+              <button type="button" class="btn-outline-editorial" data-category="uxui">
+                <span>Ver UX / UI</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Tarjeta Derecha: Visualización Interactiva 3D y Mini-Tarjetas -->
+          <article class="hero-showcase-card">
+            <div class="showcase-card-top">
+              <button type="button" class="showcase-tag-pill" data-category="solidworks">01 · Solidworks</button>
+              <button type="button" class="showcase-tag-pill" data-category="renders">02 · Renders</button>
+              <button type="button" class="showcase-tag-pill" data-category="uxui">03 · UX / UI</button>
+            </div>
+
+            <div class="hero-interactive-canvas-wrap">
+              <canvas id="hero3dCanvas" width="540" height="290" aria-label="Visualización interactiva 3D"></canvas>
+            </div>
+
+            <div class="showcase-mini-cards">
+              <div class="mini-stat-card">
+                <div class="mini-stat-title">3D <span>CAD</span></div>
+                <div class="mini-stat-desc">Planos de serie</div>
+              </div>
+              <div class="mini-stat-card">
+                <div class="mini-stat-title">4K <span>PBR</span></div>
+                <div class="mini-stat-desc">Renders de producto</div>
+              </div>
+              <div class="mini-stat-card">
+                <div class="mini-stat-title">UX <span>UI</span></div>
+                <div class="mini-stat-desc">Interfaces &amp; sistemas</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sección de Tres Tarjetas de Especialidad (Arquitectura de Proyectos) -->
+        <div class="hero-disciplines-section">
+          <div class="section-header-split">
+            <div>
+              <span class="section-kicker">ARQUITECTURA DE PROYECTOS</span>
+              <h3 class="section-heading">Del plano técnico de ingeniería<br/>a la experiencia física y digital.</h3>
+            </div>
+            <p class="section-description-side">
+              Selecciona una categoría desde el panel izquierdo o directamente en estas tarjetas para abrir las fichas técnicas, planos de fabricación, videos y galerías en alta resolución.
+            </p>
+          </div>
+
+          <div class="connected-cards-grid">
+            <!-- Tarjeta 01: Solidworks -->
+            <article class="discipline-card theme-light" data-category="solidworks" tabindex="0" role="button" aria-label="Abrir galería de Solidworks">
+              <div>
+                <div class="discipline-card-top">
+                  <span class="discipline-num">01 // CAD &amp; INGENIERÍA</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <h4 class="discipline-title">Solidworks</h4>
+                <p class="discipline-desc">
+                  Modelado paramétrico de piezas y ensambles complejos, análisis de tolerancias, despieces explosivos (BOM) y planos técnicos listos para producción en serie.
+                </p>
+              </div>
+              <span class="discipline-pill">Ver Fichas Solidworks →</span>
+            </article>
+
+            <!-- Tarjeta 02: Renders -->
+            <article class="discipline-card theme-dark" data-category="renders" tabindex="0" role="button" aria-label="Abrir galería de Renders">
+              <div>
+                <div class="discipline-card-top">
+                  <span class="discipline-num" style="color: var(--accent);">02 // VISUALIZACIÓN</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                  </svg>
+                </div>
+                <h4 class="discipline-title">Renders</h4>
+                <p class="discipline-desc">
+                  Simulación física de materiales (PBR), texturas CMF, iluminación de estudio HDRI y animaciones de producto fotorrealistas para validación comercial.
+                </p>
+              </div>
+              <span class="discipline-pill">Ver Galería Renders →</span>
+            </article>
+
+            <!-- Tarjeta 03: UX / UI -->
+            <article class="discipline-card theme-accent" data-category="uxui" tabindex="0" role="button" aria-label="Abrir galería de UX / UI">
+              <div>
+                <div class="discipline-card-top">
+                  <span class="discipline-num">03 // PRODUCTO DIGITAL</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h4 class="discipline-title">UX / UI</h4>
+                <p class="discipline-desc">
+                  Investigación con usuarios, arquitectura de información, sistemas de diseño escalables y prototipos interactivos de alta fidelidad centrados en las personas.
+                </p>
+              </div>
+              <span class="discipline-pill">Ver Casos UX / UI →</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Metodología en Tarjetas Independientes (Sin líneas divisorias rígidas) -->
+        <div class="process-cards-grid" aria-label="Metodología de trabajo">
+          <article class="process-card">
+            <div class="process-number">01</div>
+            <h4 class="process-step-title">Investigación</h4>
+            <p class="process-step-text">Articulación de factores ergonómicos, socioculturales, ambientales y productivos centrados en las personas.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">02</div>
+            <h4 class="process-step-title">Ingeniería CAD</h4>
+            <p class="process-step-text">Desarrollo paramétrico en SolidWorks, validación estructural y documentación técnica para producción en serie.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">03</div>
+            <h4 class="process-step-title">Renderizado 3D</h4>
+            <p class="process-step-text">Exploración de materiales, iluminación de estudio y visualización fotorrealista para comunicar valor.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">04</div>
+            <h4 class="process-step-title">Experiencia UX/UI</h4>
+            <p class="process-step-text">Diseño de interfaces, flujos de interacción y servicios digitales que completan la experiencia del producto.</p>
+          </article>
+        </div>
+
+      </section>
+
+      <!-- ====================================================================
+           D. VISTA DINÁMICA DE PROYECTOS (PANTALLA DE EXHIBICIÓN)
+           ==================================================================== -->
+      <section id="projectsView" class="view-panel is-hidden" aria-label="Pantalla de exhibición de proyectos">
+        <div class="category-exhibition-header">
+          <div class="exhibition-header-left">
+            <button id="backToHeroBtn" type="button" class="back-to-hero-btn">
+              <span>← Volver a Presentación</span>
+            </button>
+            <h2 class="exhibition-category-title">
+              <span id="exhibitionTitleText">Solidworks</span>
+              <span id="exhibitionCodePill" class="exhibition-category-pill">CAT // 01</span>
+            </h2>
+            <p id="exhibitionSubtitleText" class="exhibition-category-subtitle">
+              Ingeniería de producto, modelado paramétrico de precisión, ensambles mecánicos y planos técnicos bajo normativa ISO para producción industrial en serie.
+            </p>
+          </div>
+
+          <!-- Selector directo entre categorías sin recargar la página -->
+          <div class="exhibition-quick-switcher" role="tablist" aria-label="Cambiar categoría">
+            <button type="button" class="quick-switch-btn is-active" data-category="solidworks">Solidworks</button>
+            <button type="button" class="quick-switch-btn" data-category="renders">Renders</button>
+            <button type="button" class="quick-switch-btn" data-category="uxui">UX / UI</button>
+          </div>
+        </div>
+
+        <!-- Contenedor dinámico donde se inyectan las Fichas de Proyecto de la categoría activa -->
+        <div id="projectsFeedContainer" class="projects-feed"></div>
+      </section>
+
+      <!-- Banner de Contacto Directo (Compacto: Título + Botón "Opciones de Contacto") -->
+      <div class="cta-banner-editorial">
+        <h3 class="cta-banner-title">¿Listo para llevar un producto del concepto a la realidad?</h3>
+        <div class="cta-banner-actions">
+          <button id="bannerContactBtn" type="button" class="btn-dark-pill">
+            <span>Opciones de Contacto</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer: Solo mail y botón de Contacto a la derecha -->
+      <footer class="site-footer">
+        <div>© 2026 <strong>Luca Bonessi</strong> — Diseñador Industrial / UXUI</div>
+        <div class="footer-links">
+          <a href="mailto:lucabonessidi@gmail.com">lucabonessidi@gmail.com</a>
+          <button id="footerContactBtn" type="button" style="text-decoration: underline;">CONTACTO</button>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE CONTACTO INTERACTIVO (CON LINK DIRECTO A WHATSAPP + REDES)
+       ======================================================================== -->
+  <div id="contactModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="contactModalTitle" class="modal-title">Contactar a Luca Bonessi</h3>
+        <button id="closeContactModalBtn" type="button" class="modal-close-btn" aria-label="Cerrar ventana de contacto">✕</button>
+      </div>
+      <div class="modal-body">
+        <!-- Acción Principal Directa: Iniciar Chat de WhatsApp -->
+        <a
+          href="https://wa.me/542302381166?text=Hola%20Luca%2C%20vi%20tu%20portfolio%20web%20y%20me%20gustar%C3%ADa%20consultar%20por%20un%20proyecto."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-hero-cta"
+        >
+          <div>
+            <span class="whatsapp-cta-title">Iniciar Chat en WhatsApp</span>
+            <span class="whatsapp-cta-sub">Respuesta directa · +54 2302 381166</span>
+          </div>
+          <span>ABRIR CHAT ↗</span>
+        </a>
+
+        <!-- Canales Directos: Correo, Instagram y LinkedIn -->
+        <div class="contact-direct-grid">
+          <a href="mailto:lucabonessidi@gmail.com" class="contact-box">
+            <span class="contact-box-label">EMAIL</span>
+            <span class="contact-box-val">lucabonessidi@gmail.com ↗</span>
+          </a>
+          <a href="https://www.instagram.com/lucabonessi.di/" target="_blank" rel="noopener noreferrer" class="contact-box">
+            <span class="contact-box-label">INSTAGRAM</span>
+            <span class="contact-box-val">@lucabonessi.di ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/lbonessidi/" target="_blank" rel="noopener noreferrer" class="contact-box">
+            <span class="contact-box-label">LINKEDIN</span>
+            <span class="contact-box-val">/in/lbonessidi ↗</span>
+          </a>
+        </div>
+
+        <!-- Formulario que arma el mensaje y abre directamente el chat de WhatsApp -->
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="form-group">
+            <label for="contactName">Tu Nombre / Empresa</label>
+            <input id="contactName" class="form-input" type="text" placeholder="Ej. Nombre o Estudio" required />
+          </div>
+          <div class="form-group">
+            <label for="contactArea">Especialidad de interés</label>
+            <select id="contactArea" class="form-input">
+              <option value="SolidWorks y Planos de Producción">SolidWorks &amp; Planos de Producción en Serie</option>
+              <option value="Renderizado Fotorrealista 3D">Renderizado Fotorrealista de Productos</option>
+              <option value="Diseño UX/UI">Diseño de Experiencias e Interfaces UX/UI</option>
+              <option value="Proyecto Integral">Proyecto Integral (Diseño Industrial + UX/UI)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Mensaje para WhatsApp</label>
+            <textarea id="contactMsg" class="form-input" rows="2" placeholder="Hola Luca, te escribo para consultarte sobre..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary-orange" style="justify-content: center; width: 100%;">
+            <span id="contactSubmitLabel">Enviar Mensaje por WhatsApp (+54 2302 381166)</span>
+            <span>↗</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL LIGHTBOX PARA AMPLIACIÓN DE PLANOS Y RENDERS EN ALTA RESOLUCIÓN
+       ======================================================================== -->
+  <div id="lightboxModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Vista ampliada de proyecto">
+    <div class="modal-card lightbox-card">
+      <div class="modal-header" style="background-color: #141413; color: #FAF8F5; border-color: rgba(255,255,255,0.18);">
+        <h3 id="lightboxTitle" class="modal-title">VISTA EN ALTA RESOLUCIÓN</h3>
+        <button id="closeLightboxBtn" type="button" class="modal-close-btn" style="color: #FAF8F5; background-color: transparent; border-color: rgba(255,255,255,0.4);" aria-label="Cerrar vista ampliada">✕</button>
+      </div>
+      <div class="lightbox-media-wrap">
+        <img id="lightboxImg" src="" alt="Vista ampliada del proyecto" />
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
