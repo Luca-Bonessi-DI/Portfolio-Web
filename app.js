@@ -187,114 +187,94 @@ const CATEGORIES_META = {
 const PROJECTS_DATA = {
   solidworks: [
     {
-      id: 'sw-01',
-      code: 'SW // 01 · PRODUCCIÓN EN SERIE',
-      title: 'Cafetera de Espresso Modular "KINETIC-01" — Ensamble & Matricería',
+      id: 'sw-dron-submarino',
+      code: 'SOLIDWORKS // 01',
+      title: 'Dron Submarino',
       year: '2026',
-      tags: ['SolidWorks CAD', 'Chapa Metálica', 'Inyección ABS/PC', 'Planos ISO 128'],
-      lead: 'Desarrollo integral de ingeniería de producto para una cafetera de especialidad doméstica-profesional con grupo térmico extraíble y chasis de aluminio plegado.',
-      process: 'Modelado paramétrico de 48 componentes en SolidWorks, incluyendo análisis de ángulo de desmoldeo (Draft Analysis) para carcasas en policarbonato, estudio de interferencias mecánicas y simulación térmica del bloque caldera.',
-      tools: 'SolidWorks Premium (Sólidos, Superficies, Sheet Metal, Simulation) + Illustrator para serigrafía técnica de cotas y manual de armado.',
-      solution: 'Reducción del 22% en tornillería mediante encastres elásticos (snap-fits) calculados por elementos finitos y paquete completo de 34 planos de fabricación para producción en serie.',
+      tags: ['SolidWorks CAD', 'Ensamble .SLDASM', 'Archivo .STEP / .STL', 'Hidrodinámica'],
+      lead: 'Diseño y modelado tridimensional en SolidWorks de un vehículo autónomo subacuático (ROV / Dron Submarino) con carenado hidrodinámico, rotor vertical central de inmersión y doble propulsor trasero entubado.',
+      process: 'Desarrollo de superficies continuas para reducir el coeficiente de arrastre subacuático, diseño de toberas laterales canalizadas, cabezal estanco frontal para sensores/cámara y ensamble mecánico completo validado en SolidWorks.',
+      tools: 'SolidWorks (Modelado de Sólidos, Superficies y Ensambles .SLDASM), exportación para prototipado e ingeniería (.STEP y .STL) y renderizado técnico de conjunto.',
+      solution: 'Arquitectura modular con acceso rápido a compartimentos sellados, protección perimetral de hélices y geometría optimizada para estabilidad direccional bajo el agua.',
       media: [
         {
-          type: 'video',
-          simMode: 'cad-turntable',
-          label: 'VIDEO · Animación Explosiva 3D & Corte Seccional (60 FPS)',
-          caption: 'Simulación cinemática de despiece axial y tolerancias de ensamble en SolidWorks'
+          type: 'image',
+          label: 'Dron Submarino — Vista General Isométrica',
+          caption: 'Ensamble completo del Dron Submarino con doble propulsor trasero y carenado hidrodinámico',
+          src: 'Proyectos/Solidworks/Dron Submarino/Untitled.JPG'
         },
         {
           type: 'image',
-          label: 'PLANO 01 · Proyección Ortogonal y Corte A-A',
-          caption: 'Lámina técnica ISO-E con tolerancias geométricas GD&T y cotas funcionales',
-          src: createTechnicalBlueprintSVG({
-            code: 'PLANO TÉCNICO // SW-01-A',
-            title: 'GRUPO TÉRMICO KINETIC-01 — CORTE SECCIONAL A-A',
-            subtitle: 'MATERIAL: AL 6061-T6 / ESCALA 1:1',
-            mode: 'cad-ortho'
-          })
+          label: 'Dron Submarino — Detalle Superior de Turbina Central',
+          caption: 'Vista superior del rotor vertical de control de profundidad y carcasa superior',
+          src: 'Proyectos/Solidworks/Dron Submarino/Untitled2.JPG'
         },
         {
           type: 'image',
-          label: 'PLANO 02 · Despiece Explosivo Isométrico (BOM)',
-          caption: 'Listado de materiales (Bill of Materials) y secuencia de montaje en línea',
-          src: createTechnicalBlueprintSVG({
-            code: 'ENSAMBLE // SW-01-BOM',
-            title: 'SUB-ENSAMBLE FRONTAL — EXPLOSIONADO DE SERIE',
-            subtitle: '48 PIEZAS · INYECCIÓN & CNC',
-            mode: 'cad-exploded'
-          })
+          label: 'Dron Submarino — Detalle de Tobera Lateral y Fijaciones',
+          caption: 'Acercamiento a la canalización lateral, tornillería de cierre y propulsores traseros',
+          src: 'Proyectos/Solidworks/Dron Submarino/Untitled5.JPG'
         }
       ]
     },
     {
-      id: 'sw-02',
-      code: 'SW // 02 · MOVILIDAD URBANA',
-      title: 'Mecanismo de Plegado Monoblock para Scooter Eléctrico "VÉRTICE"',
-      year: '2025',
-      tags: ['SolidWorks Simulation', 'Mecanizado CNC', 'FEAs Estructural', 'Planos de Taller'],
-      lead: 'Diseño mecánico y validación estructural de una bisagra de bloqueo rápido accionada con un solo pie para micromovilidad urbana de uso intensivo.',
-      process: 'Iteración paramétrica de levas excéntricas y pasadores de acero inoxidable. Se ejecutaron estudios estáticos no lineales (FEA) sometiendo el conjunto a cargas dinámicas de 2.400 N.',
-      tools: 'SolidWorks CAD, SolidWorks Motion, SolidWorks Simulation, Planos ejecutivos de mecanizado 5 ejes.',
-      solution: 'Factor de seguridad de 3.4x superando normativa EN 17128, logrando un cierre sin holguras mecánicas en menos de 1.5 segundos.',
+      id: 'sw-puesto-reciclado-vidrio',
+      code: 'SOLIDWORKS // 02',
+      title: 'Puesto de reciclado de vidrio',
+      year: '2026',
+      tags: ['SolidWorks', 'Diseño Sustentable', 'Mobiliario Urbano Móvil', 'Producción'],
+      lead: 'Diseño integral de puesto móvil e interactivo ("VIDRIA") para concientización, recepción y reciclado de envases de vidrio en espacios públicos y parques urbanos.',
+      process: 'Modelado estructural en caño metálico galvanizado con ruedas giratorias de alta carga, planos de trabajo superiores rebatibles en madera, estanterías internas de acopio y sistema superior desmontable para paneles de comunicación ambiental.',
+      tools: 'SolidWorks para estructura metálica, mecanismos rebatibles y despiece productivo; Adobe Illustrator para gráfica ambiental ("Cada botella cuenta" / "Tu vidrio vuelve a tener vida").',
+      solution: 'Módulo autoportante y transportable que pasa de posición compacta de traslado a puesto de atención de 360° en minutos, articulando factores ambientales, socioculturales y productivos.',
       media: [
         {
           type: 'image',
-          label: 'PLANO 01 · Geometría de Leva y Cinemática',
-          caption: 'Cotas críticas de mecanizado CNC en aluminio aeronáutico 7075',
-          src: createTechnicalBlueprintSVG({
-            code: 'MECÁNICA // SW-02-CNC',
-            title: 'ARTICULACIÓN MONOBLOCK VÉRTICE — COTAS CNC',
-            subtitle: 'ALUMINIO 7075-T6 · ANODIZADO DURO',
-            mode: 'cad-ortho'
-          })
-        },
-        {
-          type: 'video',
-          simMode: 'cad-mechanism',
-          label: 'VIDEO · Cinemática de Bloqueo y Mapa de Tensiones Von Mises',
-          caption: 'Reproducción fluida del ciclo de articulación y vectores de carga'
+          label: 'Puesto de reciclado de vidrio — Vista Principal Desplegada',
+          caption: 'Módulo VIDRIA con mesadas laterales desplegadas y cenefa informativa superior',
+          src: 'Proyectos/Solidworks/Puesto de reciclado de vidrio/1.1.png'
         },
         {
           type: 'image',
-          label: 'PLANO 02 · Explosión de Rodamientos y Ejes',
-          caption: 'Disposición de bujes autolubricados y eje templado por inducción',
-          src: createTechnicalBlueprintSVG({
-            code: 'DESPIECE // SW-02-EXP',
-            title: 'CONJUNTO DE EJE Y TRABA DE SEGURIDAD',
-            subtitle: 'TOLERANCIA H7/g6 · SERIE 5.000 UNIDADES',
-            mode: 'cad-exploded'
-          })
+          label: 'Puesto de reciclado de vidrio — Vista de Gráfica y Estructura',
+          caption: 'Paneles educativos de economía circular e infografía del ciclo de reciclado del vidrio',
+          src: 'Proyectos/Solidworks/Puesto de reciclado de vidrio/1.2.png'
+        },
+        {
+          type: 'image',
+          label: 'Puesto de reciclado de vidrio — Configuración Compacta y Despiece',
+          caption: 'Sistema con alas rebatidas y paneles superiores desmontados para logística y guardado',
+          src: 'Proyectos/Solidworks/Puesto de reciclado de vidrio/1.14.png'
+        },
+        {
+          type: 'image',
+          label: 'Puesto de reciclado de vidrio — Implantación en Contexto Urbano',
+          caption: 'Puesto en uso real en espacio público articulando la participación ciudadana',
+          src: 'Proyectos/Solidworks/Puesto de reciclado de vidrio/unnamed.jpg'
         }
       ]
     },
     {
-      id: 'sw-03',
-      code: 'SW // 03 · DISPOSITIVO MÉDICO',
-      title: 'Carcasa Ergonómica IP67 para Monitor Portátil de Signos Vitales',
-      year: '2025',
-      tags: ['Superficies Complejas', 'Inyección Bi-Material', 'Ergonomía', 'Matrices'],
-      lead: 'Modelado híbrido de superficies y sólidos para equipamiento médico hospitalario resistente a impactos y agentes de desinfección.',
-      process: 'Desarrollo de superficies Clase-A con continuidad de curvatura (G2) para agarre ambidiestro, diseño de labio perimetral para junta elastomérica (TPE) y torretas de fijación interna para PCB.',
-      tools: 'SolidWorks Surfacing, Mold Tools, Análisis de espesores y líneas de partición.',
-      solution: 'Aprobación en ensayo de caída libre desde 1.8m y optimización del ciclo de inyección en molde de 2 cavidades.',
+      id: 'sw-puesto-frutas-verduras',
+      code: 'SOLIDWORKS // 03',
+      title: 'Puesto de venta de frutas y verduras',
+      year: '2026',
+      tags: ['SolidWorks', 'Equipamiento Comercial', 'Ergonomía', 'Producción en Serie'],
+      lead: 'Desarrollo de equipamiento modular para exhibición, conservación y comercialización de frutas y verduras centrado en la ergonomía del vendedor y la experiencia de compra del usuario.',
+      process: 'Articulación de factores higiénicos, estructurales y productivos mediante modelado paramétrico en SolidWorks, optimizando ángulos de exhibición, ventilación de mercadería y facilidad de montaje.',
+      tools: 'SolidWorks (Modelado 3D, Chapa Metálica, Estructura Tubular y Planos Técnicos de Fabricación).',
+      solution: 'Sistema resistente, apilable y de fácil limpieza adaptable a ferias itinerantes y mercados locales.',
       media: [
         {
           type: 'image',
-          label: 'PLANO 01 · Despiece de Carcasas y Sello TPE',
-          caption: 'Arquitectura interna de nervaduras rigidizadoras y alojamiento de electrónica',
+          label: 'Puesto de venta de frutas y verduras — Lámina Técnica',
+          caption: 'Documentación y desarrollo estructural en carpeta Proyectos/Solidworks/Puesto de venta de frutas y verduras',
           src: createTechnicalBlueprintSVG({
-            code: 'MATRICERÍA // SW-03-MOLD',
-            title: 'CARCASA BI-INYECTADA IP67 — DESPIECE',
-            subtitle: 'PC/ABS GRADO MÉDICO + TPE SHORE 60A',
+            code: 'SOLIDWORKS // PUESTO DE VENTA',
+            title: 'PUESTO DE VENTA DE FRUTAS Y VERDURAS',
+            subtitle: 'MODELADO 3D & PLANOS DE PRODUCCIÓN',
             mode: 'cad-exploded'
           })
-        },
-        {
-          type: 'video',
-          simMode: 'cad-turntable',
-          label: 'VIDEO · Inspección 360° de Superficies y Líneas de Partición',
-          caption: 'Verificación continua de geometría paramétrica para producción en serie'
         }
       ]
     }
@@ -302,99 +282,63 @@ const PROJECTS_DATA = {
 
   renders: [
     {
-      id: 'rn-01',
-      code: 'RN // 01 · AUDIO INDUSTRIAL',
-      title: 'Sintetizador Portátil Analógico "MONOLITH-8" — Visualización CMF',
+      id: 'rn-silla-ch33',
+      code: 'RENDER // 01',
+      title: 'Silla CH33',
       year: '2026',
-      tags: ['KeyShot PBR', 'Iluminación HDRI', 'Materialidad CMF', 'Post-Producción'],
-      lead: 'Dirección de arte y renderizado fotorrealista para el lanzamiento global de un instrumento musical electrónico con chasis de aluminio cepillado y controles táctiles en policarbonato mate.',
-      process: 'Configuración de shaders físicamente correctos (PBR): micro-rugosidad anisotrópica en aluminio negro anodizado, sub-surface scattering en teclas translúcidas y estudio de iluminación de tres puntos con reflejos controlados.',
-      tools: 'Modelado base en SolidWorks, texturizado e iluminación en KeyShot Pro, acabados gráficos de serigrafía en Adobe Illustrator.',
-      solution: 'Pack de 18 imágenes de alta resolución (4K) y secuencia de video de producto utilizadas en campaña de preventa y catálogo editorial.',
+      tags: ['Render Fotorrealista', 'Iluminación & Contexto', 'Materialidad PBR', 'Mobiliario'],
+      lead: 'Estudio de renderizado fotorrealista, iluminación arquitectónica y detalle matérico para la clásica Silla CH33, explorando su comportamiento visual tanto en escenas conceptuales como en contextos interiores habitables.',
+      process: 'Configuración de texturas físicas (PBR) de alta resolución para el veteado orgánico de la madera curvada y la micro-textura del tapizado violeta, acompañado de encuadres fotográficos de detalle 1:1 y composiciones de atmósfera.',
+      tools: 'Modelado 3D, Motores de Renderizado Fotorrealista, configuración de cámaras (profundidad de campo / DoF), iluminación HDRI y post-producción gráfica.',
+      solution: 'Serie de entregas visuales en formatos 16:9 y 1:1 para presentación editorial, piezas de difusión (flyers representativos) y validación de acabados superficiales.',
       media: [
         {
-          type: 'video',
-          simMode: 'render-studio',
-          label: 'VIDEO · Barrido de Luz de Estudio y Reflejos Anisotrópicos (60 FPS)',
-          caption: 'Secuencia dinámica de iluminación rasante sobre chasis anodizado y diales terracota'
+          type: 'image',
+          label: 'Flyer representativo 16.9',
+          caption: 'Escena conceptual exterior con pórticos reflectantes y lumínicos en formato 16:9',
+          src: 'Proyectos/Render/Silla CH33/Flyer representativo 16.9.jpg'
         },
         {
           type: 'image',
-          label: 'RENDER 01 · Hero Shot en Estudio Oscuro',
-          caption: 'Contraste dramático entre aluminio carbón #141413 y acentos operativos en terracota #D96B43',
-          src: createTechnicalBlueprintSVG({
-            code: 'STUDIO RENDER // RN-01-HERO',
-            title: 'MONOLITH-8 — ALUMINIO ANODIZADO & PC SOFT-TOUCH',
-            subtitle: 'KEYSHOT RAYTRACING · 4096 x 2304 PX',
-            mode: 'render'
-          })
+          label: 'Render de Contexto 2 Silla CH33',
+          caption: 'Ambientación interior con contraste de luz natural lateral e iluminación cálida suspendida',
+          src: 'Proyectos/Render/Silla CH33/Render de Contexto 2 Silla CH33.png'
         },
         {
           type: 'image',
-          label: 'RENDER 02 · Detalle Macro de Perillas y Serigrafía',
-          caption: 'Estudio de profundidad de campo (DoF) y moleteado micrométrico',
-          src: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1400&q=85'
+          label: 'Flyer representativo 1.1',
+          caption: 'Composición en formato 1:1 sobre pedestal metálico con desenfoque selectivo',
+          src: 'Proyectos/Render/Silla CH33/Flyer representativo 1.1.jpg'
+        },
+        {
+          type: 'image',
+          label: 'Detalle 1 en 1',
+          caption: 'Acercamiento macro 1:1 destacando las uniones en madera maciza y la textura del asiento tapizado',
+          src: 'Proyectos/Render/Silla CH33/Detalle 1 en 1.jpg'
         }
       ]
     },
     {
-      id: 'rn-02',
-      code: 'RN // 02 · ILUMINACIÓN SUSTENTABLE',
-      title: 'Luminaria de Escritorio "ÁUREA" en Biopolímero y Bronce',
-      year: '2025',
-      tags: ['Render de Producto', 'Sustentabilidad', 'Estudio de Luz Cálida', 'Catálogo'],
-      lead: 'Visualización fotorrealista de una línea de iluminación arquitectónica fabricada con polímeros reciclados con carga mineral y contrapeso de latón mecanizado.',
-      process: 'Simulación de iluminación fotométrica IES real de 2700K interactuando con texturas granulares de biocompuesto reciclado, resaltando la calidez matérica y el equilibrio visual.',
-      tools: 'SolidWorks, KeyShot (IES Light Profiles, RealCloth & Procedural Noise), Illustrator.',
-      solution: 'Validación de 4 variantes cromáticas (Hueso, Terracota, Carbón y Salvia) antes de producir la primera tirada de matrices.',
+      id: 'rn-inmobiliaria',
+      code: 'RENDER // 02',
+      title: 'Inmobiliaria',
+      year: '2026',
+      tags: ['Visualización Arquitectónica', 'Render Interior / Exterior', 'Iluminación Natural', 'Materialidad'],
+      lead: 'Desarrollo de visualización fotorrealista aplicada al sector inmobiliario y arquitectónico, enfocada en transmitir espacialidad, calidez lumínica y realismo constructivo.',
+      process: 'Simulación de iluminación física solar y artificial, calibración de materiales arquitectónicos (hormigón, maderas, cristales y metales) y composición de cámaras de recorrido visual.',
+      tools: 'Modelado 3D, Renderizado Fotorrealista de Espacios y Producto, Post-producción.',
+      solution: 'Material visual de alta fidelidad para comercialización, pre-visualización de obra y presentación a clientes.',
       media: [
         {
           type: 'image',
-          label: 'RENDER 01 · Composición Editorial Minimalista',
-          caption: 'Estudio de sombras suaves y temperatura de color cálida 2700K',
-          src: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1400&q=85'
-        },
-        {
-          type: 'video',
-          simMode: 'render-studio',
-          label: 'VIDEO · Transición de Temperatura Lumínica y Materialidad PBR',
-          caption: 'Demostración en tiempo real de respuesta especular y emisión lumínica'
-        },
-        {
-          type: 'image',
-          label: 'RENDER 02 · Carta CMF de Acabados Superficiales',
-          caption: 'Comparativa de rugosidad superficial VDI 27 y bronce satinado',
+          label: 'Inmobiliaria — Visualización Fotorrealista',
+          caption: 'Proyecto alojado en carpeta Proyectos/Render/Inmobiliaria',
           src: createTechnicalBlueprintSVG({
-            code: 'CMF SPECIFICATION // RN-02',
-            title: 'CARTA DE MATERIALES: BIOPOLÍMERO & LATÓN',
-            subtitle: 'PBR SHADER GRAPH · IES PHOTOMETRY',
+            code: 'RENDER // INMOBILIARIA',
+            title: 'INMOBILIARIA — VISUALIZACIÓN ARQUITECTÓNICA & ESPACIAL',
+            subtitle: 'ILUMINACIÓN FÍSICA & MATERIALIDAD PBR',
             mode: 'render'
           })
-        }
-      ]
-    },
-    {
-      id: 'rn-03',
-      code: 'RN // 03 · PACKAGING & CONSUMO',
-      title: 'Sistema de Envases Recargables "TERRA BOTANICALS"',
-      year: '2025',
-      tags: ['Vidrio Esmerilado', 'Cápsulas Recargables', 'Eco-Diseño', 'KeyShot'],
-      lead: 'Renderizado hiperrealista de envases cosméticos recargables diseñados bajo criterios de economía circular y reducción de huella plástica.',
-      process: 'Simulación de refracción caústica en vidrio reciclado esmerilado y cápsulas internas intercambiables de polipropileno monomaterial.',
-      tools: 'SolidWorks, KeyShot Caustics & Dielectric Glass Shaders, Illustrator para diseño de etiquetas tipográficas.',
-      solution: 'Presentación visual ganadora para licitación de línea sustentable, reduciendo el costo de prototipos físicos fotográficos en un 70%.',
-      media: [
-        {
-          type: 'image',
-          label: 'RENDER 01 · Conjunto de Envases y Cápsula Refill',
-          caption: 'Refracción física en vidrio esmerilado y acentos cerámicos mate',
-          src: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=85'
-        },
-        {
-          type: 'video',
-          simMode: 'render-studio',
-          label: 'VIDEO · Rotación de Estudio y Sistema de Recarga',
-          caption: 'Visualización fluida del desacople de cápsula recargable'
         }
       ]
     }

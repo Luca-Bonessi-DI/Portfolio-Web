@@ -1315,7 +1315,7 @@ ul, ol {
   width: 100%;
   aspect-ratio: 16 / 10;
   border: var(--border-width) solid var(--border-color);
-  background-color: #141413;
+  background-color: #F4F1EA;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -1323,7 +1323,17 @@ ul, ol {
   justify-content: center;
 }
 
-.media-stage-frame img,
+[data-theme="dark"] .media-stage-frame {
+  background-color: #141413;
+}
+
+.media-stage-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .media-stage-frame video,
 .media-stage-frame canvas {
   width: 100%;
